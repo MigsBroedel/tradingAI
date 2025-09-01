@@ -1,0 +1,24 @@
+2025-09-01 08:20:50 | INFO     | __main__:main:16 | ============================================================
+2025-09-01 08:20:50 | INFO     | __main__:main:17 | TRADING SYSTEM - INICIANDO
+2025-09-01 08:20:50 | INFO     | __main__:main:18 | ============================================================
+2025-09-01 08:20:50 | INFO     | storage.database:_create_tables:45 | Database tables created/verified
+2025-09-01 08:20:50 | INFO     | storage.database:__init__:16 | Database initialized at: data/trading_system.db
+2025-09-01 08:20:50 | INFO     | __main__:main:28 | Symbols to collect: ['AAPL', 'GOOGL', 'MSFT', 'TSLA', 'NVDA']
+2025-09-01 08:20:50 | INFO     | __main__:main:29 | Interval: 1d
+2025-09-01 08:20:50 | INFO     | __main__:main:30 | Period: 30d
+2025-09-01 08:20:50 | INFO     | data_collectors.market_data:collect_multiple:98 | Starting collection for 5 symbols
+2025-09-01 08:20:50 | INFO     | data_collectors.market_data:collect:27 | Collecting data for AAPL - period: 30d, interval: 1d
+2025-09-01 08:21:22 | INFO     | storage.database:save_market_data:90 | Inserted 30 new records for AAPL
+2025-09-01 08:21:22 | INFO     | data_collectors.market_data:collect:44 | Successfully collected 30 records for AAPL
+2025-09-01 08:21:23 | INFO     | data_collectors.market_data:collect:27 | Collecting data for GOOGL - period: 30d, interval: 1d
+2025-09-01 08:21:24 | INFO     | storage.database:save_market_data:90 | Inserted 30 new records for GOOGL
+2025-09-01 08:21:24 | INFO     | data_collectors.market_data:collect:44 | Successfully collected 30 records for GOOGL
+2025-09-01 08:21:25 | INFO     | data_collectors.market_data:collect:27 | Collecting data for MSFT - period: 30d, interval: 1d
+2025-09-01 08:21:27 | INFO     | storage.database:save_market_data:90 | Inserted 30 new records for MSFT
+2025-09-01 08:21:27 | INFO     | data_collectors.market_data:collect:44 | Successfully collected 30 records for MSFT
+2025-09-01 08:21:28 | INFO     | data_collectors.market_data:collect:27 | Collecting data for TSLA - period: 30d, interval: 1d
+2025-09-01 08:21:29 | INFO     | storage.database:save_market_data:90 | Inserted 30 new records for TSLA
+2025-09-01 08:21:29 | INFO     | data_collectors.market_data:collect:44 | Successfully collected 30 records for TSLA
+2025-09-01 08:21:30 | INFO     | data_collectors.market_data:collect:27 | Collecting data for NVDA - period: 30d, interval: 1d
+2025-09-01 08:21:32 | INFO     | storage.database:save_market_data:90 | Inserted 30 new records for NVDA
+2025-09-01 08:21:32 | INFO     | data_collectors.market_data:collect:44 | Successfully collected 30 records for NVDA
