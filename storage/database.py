@@ -131,3 +131,23 @@ class DatabaseManager:
             'unique_symbols': unique_symbols,
             'last_update': last_update
         }
+
+    def insert_news(self, title: str, content: str, url: str, source: str,
+                    published_at: str, sentiment_label: str, sentiment_score: float,
+                    symbols: list):
+        """Insere uma notícia no banco"""
+        query = """
+        INSERT INTO news (
+            title, content, url, source, published_at,
+            sentiment_label, sentiment_score, symbols
+        ) VALUES (
+            %s, %s, %s, %s, %s,
+            %s, %s, %s::text[]
+        )
+        """
+        with self.get_connection() as conn:
+            conn.execute(text(query), (
+                title, content, url, source, published_at,
+                sentiment_label, sentiment_score, symbols  # Python list → PostgreSQL array
+            ))
+            conn.commit()

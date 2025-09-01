@@ -3,7 +3,8 @@ import pandas as pd
 from typing import Optional
 from datetime import datetime, timedelta
 from .base_collector import BaseCollector
-from storage.database import DatabaseManager
+from storage.database_postgres import DatabaseManager # Changed to use PostgreSQL DatabaseManager
+from utils.indicators import calculate_sma, calculate_rsi
 
 class MarketDataCollector(BaseCollector):
     """Coletor de dados de preços usando Yahoo Finance"""
@@ -35,8 +36,12 @@ class MarketDataCollector(BaseCollector):
                 return False
             
             # Valida dados
-            if not self._validate_market_data(data, symbol):
+            if not self._validate_market_data(data, symbol, interval):
                 return False
+
+            # Calcula indicadores técnicos
+            data["SMA"] = calculate_sma(data, window=20) # Exemplo: SMA de 20 períodos
+            data["RSI"] = calculate_rsi(data, window=14) # Exemplo: RSI de 14 períodos
             
             # Salva no banco
             records_inserted = self.db.save_market_data(data, symbol, interval)
@@ -57,13 +62,13 @@ class MarketDataCollector(BaseCollector):
         
         return data
     
-    def _validate_market_data(self, data: pd.DataFrame, symbol: str) -> bool:
+    def _validate_market_data(self, data: pd.DataFrame, symbol: str, interval: str) -> bool:
         """Valida dados de mercado coletados"""
         if not super().validate_data(data):
             return False
         
         # Verifica colunas obrigatórias
-        required_columns = ['Open', 'High', 'Low', 'Close', 'Volume']
+        required_columns = ["Open", "High", "Low", "Close", "Volume"]
         missing_columns = [col for col in required_columns if col not in data.columns]
         
         if missing_columns:
@@ -71,23 +76,54 @@ class MarketDataCollector(BaseCollector):
             return False
         
         # Verifica valores negativos ou zero em preços
-        price_columns = ['Open', 'High', 'Low', 'Close']
+        price_columns = ["Open", "High", "Low", "Close"]
         for col in price_columns:
             if (data[col] <= 0).any():
                 self.logger.warning(f"Found non-positive prices in {col} for {symbol}")
         
         # Verifica se High >= Low
-        if (data['High'] < data['Low']).any():
+        if (data["High"] < data["Low"]).any():
             self.logger.error(f"Found High < Low for {symbol}")
             return False
         
         # Verifica outliers simples (variação > 50% em um dia)
         if len(data) > 1:
-            daily_change = data['Close'].pct_change().abs()
+            daily_change = data["Close"].pct_change().abs()
             outliers = daily_change > 0.5
             if outliers.any():
                 self.logger.warning(f"Found potential outliers for {symbol}: {outliers.sum()} records")
         
+        # Verifica gaps nos dados (datas contínuas)
+        if len(data) > 1:
+            # Converte o índice para datetime se ainda não for
+            if not isinstance(data.index, pd.DatetimeIndex):
+                data.index = pd.to_datetime(data.index)
+
+            # Calcula a diferença entre os timestamps consecutivos
+            time_diffs = data.index.to_series().diff().dropna()
+
+            # Define o intervalo esperado com base no intervalo de coleta
+            # Isso é uma simplificação e pode precisar de ajuste fino
+            if interval == "1d":
+                expected_delta = pd.Timedelta(days=1)
+            elif interval == "1h":
+                expected_delta = pd.Timedelta(hours=1)
+            elif interval == "1m":
+                expected_delta = pd.Timedelta(minutes=1)
+            else:
+                # Para outros intervalos, uma abordagem mais genérica ou específica pode ser necessária
+                self.logger.warning(f"Gap detection for interval {interval} is not fully implemented.")
+                expected_delta = pd.Timedelta(days=1) # Default para 1 dia se não for reconhecido
+
+            # Filtra diferenças que não são o intervalo esperado (ignorando fins de semana/feriados por enquanto)
+            # Uma validação mais robusta precisaria de um calendário de trading
+            gaps = time_diffs[time_diffs > expected_delta]
+            if not gaps.empty:
+                self.logger.warning(f"Found {len(gaps)} potential data gaps for {symbol} with interval {interval}.")
+                # Opcional: logar os gaps específicos
+                # for gap_start_time in gaps.index:
+                #     self.logger.warning(f"Gap found after {gap_start_time} for {symbol}")
+
         self.logger.debug(f"Data validation passed for {symbol}")
         return True
     
@@ -108,3 +144,5 @@ class MarketDataCollector(BaseCollector):
         self.logger.info(f"Collection completed: {successful}/{len(symbols)} successful")
         
         return results
+
+

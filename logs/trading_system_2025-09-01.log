@@ -22,3 +22,506 @@
 2025-09-01 08:21:30 | INFO     | data_collectors.market_data:collect:27 | Collecting data for NVDA - period: 30d, interval: 1d
 2025-09-01 08:21:32 | INFO     | storage.database:save_market_data:90 | Inserted 30 new records for NVDA
 2025-09-01 08:21:32 | INFO     | data_collectors.market_data:collect:44 | Successfully collected 30 records for NVDA
+2025-09-01 08:46:33 | INFO     | __main__:main:16 | ============================================================
+2025-09-01 08:46:33 | INFO     | __main__:main:17 | TRADING SYSTEM - INICIANDO
+2025-09-01 08:46:33 | INFO     | __main__:main:18 | ============================================================
+2025-09-01 08:46:33 | ERROR    | __main__:main:67 | Erro crítico no sistema: No module named 'psycopg2'
+2025-09-01 08:47:21 | INFO     | __main__:main:16 | ============================================================
+2025-09-01 08:47:21 | INFO     | __main__:main:17 | TRADING SYSTEM - INICIANDO
+2025-09-01 08:47:21 | INFO     | __main__:main:18 | ============================================================
+2025-09-01 08:47:25 | ERROR    | __main__:main:67 | Erro crítico no sistema: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 08:52:30 | INFO     | __main__:main:16 | ============================================================
+2025-09-01 08:52:30 | INFO     | __main__:main:17 | TRADING SYSTEM - INICIANDO
+2025-09-01 08:52:30 | INFO     | __main__:main:18 | ============================================================
+2025-09-01 08:52:31 | INFO     | __main__:main:28 | Symbols to collect: ['AAPL', 'GOOGL', 'MSFT', 'TSLA', 'NVDA']
+2025-09-01 08:52:31 | INFO     | __main__:main:29 | Interval: 1d
+2025-09-01 08:52:31 | INFO     | __main__:main:30 | Period: 30d
+2025-09-01 08:52:31 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 5 symbols
+2025-09-01 08:52:31 | INFO     | data_collectors.market_data:collect:28 | Collecting data for AAPL - period: 30d, interval: 1d
+2025-09-01 08:52:33 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for AAPL with interval 1d.
+2025-09-01 08:52:34 | INFO     | storage.database_postgres:save_market_data:100 | Successfully saved 30 new records for AAPL to PostgreSQL.
+2025-09-01 08:52:34 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for AAPL
+2025-09-01 08:52:35 | INFO     | data_collectors.market_data:collect:28 | Collecting data for GOOGL - period: 30d, interval: 1d
+2025-09-01 08:52:37 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for GOOGL with interval 1d.
+2025-09-01 08:52:38 | INFO     | storage.database_postgres:save_market_data:100 | Successfully saved 30 new records for GOOGL to PostgreSQL.
+2025-09-01 08:52:38 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for GOOGL
+2025-09-01 08:52:39 | INFO     | data_collectors.market_data:collect:28 | Collecting data for MSFT - period: 30d, interval: 1d
+2025-09-01 08:52:40 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for MSFT with interval 1d.
+2025-09-01 08:52:41 | INFO     | storage.database_postgres:save_market_data:100 | Successfully saved 30 new records for MSFT to PostgreSQL.
+2025-09-01 08:52:41 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for MSFT
+2025-09-01 08:52:42 | INFO     | data_collectors.market_data:collect:28 | Collecting data for TSLA - period: 30d, interval: 1d
+2025-09-01 08:52:44 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for TSLA with interval 1d.
+2025-09-01 08:52:45 | INFO     | storage.database_postgres:save_market_data:100 | Successfully saved 30 new records for TSLA to PostgreSQL.
+2025-09-01 08:52:45 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for TSLA
+2025-09-01 08:52:46 | INFO     | data_collectors.market_data:collect:28 | Collecting data for NVDA - period: 30d, interval: 1d
+2025-09-01 08:52:47 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for NVDA with interval 1d.
+2025-09-01 08:52:50 | INFO     | storage.database_postgres:save_market_data:100 | Successfully saved 30 new records for NVDA to PostgreSQL.
+2025-09-01 08:52:50 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for NVDA
+2025-09-01 08:52:51 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 5/5 successful
+2025-09-01 08:52:51 | INFO     | __main__:main:39 | 
+RESULTADOS DA COLETA:
+2025-09-01 08:52:51 | INFO     | __main__:main:42 | AAPL: ✓ SUCCESS
+2025-09-01 08:52:51 | INFO     | __main__:main:42 | GOOGL: ✓ SUCCESS
+2025-09-01 08:52:51 | INFO     | __main__:main:42 | MSFT: ✓ SUCCESS
+2025-09-01 08:52:51 | INFO     | __main__:main:42 | TSLA: ✓ SUCCESS
+2025-09-01 08:52:51 | INFO     | __main__:main:42 | NVDA: ✓ SUCCESS
+2025-09-01 08:52:51 | INFO     | __main__:main:48 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 08:52:51 | INFO     | __main__:main:49 | Total de registros: 150
+2025-09-01 08:52:51 | INFO     | __main__:main:50 | Símbolos únicos: 5
+2025-09-01 08:52:51 | INFO     | __main__:main:51 | Último update: 2025-08-29 04:00:00
+2025-09-01 08:52:51 | INFO     | __main__:main:59 | 
+ÚLTIMOS 5 REGISTROS - AAPL:
+2025-09-01 08:52:51 | INFO     | __main__:main:60 | 
+                           Open        High         Low       Close    Volume         SMA        RSI
+timestamp                                                                                           
+2025-08-25 04:00:00  226.479996  229.300003  226.229996  227.160004  30983100  220.941353  60.413745
+2025-08-26 04:00:00  226.869995  229.490005  224.690002  229.309998  54575100  221.855328  63.343053
+2025-08-27 04:00:00  228.610001  230.899994  228.259995  230.490005  31259500  222.939177  64.879148
+2025-08-28 04:00:00  230.820007  233.410004  229.339996  232.559998  38074700  224.200442  67.455514
+2025-08-29 04:00:00  232.509995  233.380005  231.369995  232.139999  39389400  225.699912  66.391328
+2025-09-01 08:52:51 | INFO     | __main__:main:62 | ============================================================
+2025-09-01 08:52:51 | INFO     | __main__:main:63 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 08:52:51 | INFO     | __main__:main:64 | ============================================================
+2025-09-01 09:11:44 | INFO     | __main__:main:11 | ============================================================
+2025-09-01 09:11:44 | INFO     | __main__:main:12 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:11:44 | INFO     | __main__:main:13 | ============================================================
+2025-09-01 09:11:44 | ERROR    | __main__:main:52 | Erro crítico no sistema: invalid literal for int() with base 10: '...'
+2025-09-01 09:13:33 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:13:33 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:13:33 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:13:34 | ERROR    | __main__:main:53 | Erro crítico no sistema: 'DatabaseManager' object has no attribute 'get_connection'
+2025-09-01 09:15:12 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:15:12 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:15:12 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:15:13 | ERROR    | __main__:main:53 | Erro crítico no sistema: 'Connection' object has no attribute 'cursor'
+2025-09-01 09:18:59 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:18:59 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:18:59 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:19:00 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 09:19:01 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 6 symbols
+2025-09-01 09:19:01 | INFO     | data_collectors.market_data:collect:28 | Collecting data for AAPL - period: 30d, interval: 1d
+2025-09-01 09:19:03 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for AAPL with interval 1d.
+2025-09-01 09:19:04 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for AAPL to PostgreSQL.
+2025-09-01 09:19:04 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for AAPL
+2025-09-01 09:19:05 | INFO     | data_collectors.market_data:collect:28 | Collecting data for GOOGL - period: 30d, interval: 1d
+2025-09-01 09:19:06 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for GOOGL with interval 1d.
+2025-09-01 09:19:07 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for GOOGL to PostgreSQL.
+2025-09-01 09:19:07 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for GOOGL
+2025-09-01 09:19:08 | INFO     | data_collectors.market_data:collect:28 | Collecting data for MSFT - period: 30d, interval: 1d
+2025-09-01 09:19:09 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for MSFT with interval 1d.
+2025-09-01 09:19:10 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for MSFT to PostgreSQL.
+2025-09-01 09:19:10 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for MSFT
+2025-09-01 09:19:11 | INFO     | data_collectors.market_data:collect:28 | Collecting data for TSLA - period: 30d, interval: 1d
+2025-09-01 09:19:13 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for TSLA with interval 1d.
+2025-09-01 09:19:14 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for TSLA to PostgreSQL.
+2025-09-01 09:19:14 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for TSLA
+2025-09-01 09:19:15 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 09:19:16 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 09:19:19 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 30 new records for PETR4.SA to PostgreSQL.
+2025-09-01 09:19:19 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 09:19:20 | INFO     | data_collectors.market_data:collect:28 | Collecting data for VALE3.SA - period: 30d, interval: 1d
+2025-09-01 09:19:21 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for VALE3.SA with interval 1d.
+2025-09-01 09:19:23 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 30 new records for VALE3.SA to PostgreSQL.
+2025-09-01 09:19:23 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for VALE3.SA
+2025-09-01 09:19:24 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 6/6 successful
+2025-09-01 09:19:26 | INFO     | data_collectors.news_collector:fetch_news:69 | 0 notícias coletadas da API.
+2025-09-01 09:19:26 | INFO     | data_collectors.news_collector:process_and_store:108 | 0 notícias relevantes inseridas no banco.
+2025-09-01 09:19:26 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 09:19:26 | INFO     | __main__:main:37 | Total de registros: 210
+2025-09-01 09:19:26 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 09:19:26 | INFO     | __main__:main:39 | Último update: 2025-08-29 04:00:00
+2025-09-01 09:19:26 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 09:19:26 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 09:19:26 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 09:23:20 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:23:20 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:23:20 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:23:21 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 09:23:21 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 6 symbols
+2025-09-01 09:23:21 | INFO     | data_collectors.market_data:collect:28 | Collecting data for AAPL - period: 30d, interval: 1d
+2025-09-01 09:23:24 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for AAPL with interval 1d.
+2025-09-01 09:23:24 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for AAPL to PostgreSQL.
+2025-09-01 09:23:24 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for AAPL
+2025-09-01 09:23:25 | INFO     | data_collectors.market_data:collect:28 | Collecting data for GOOGL - period: 30d, interval: 1d
+2025-09-01 09:23:26 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for GOOGL with interval 1d.
+2025-09-01 09:23:27 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for GOOGL to PostgreSQL.
+2025-09-01 09:23:27 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for GOOGL
+2025-09-01 09:23:28 | INFO     | data_collectors.market_data:collect:28 | Collecting data for MSFT - period: 30d, interval: 1d
+2025-09-01 09:23:29 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for MSFT with interval 1d.
+2025-09-01 09:23:30 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for MSFT to PostgreSQL.
+2025-09-01 09:23:30 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for MSFT
+2025-09-01 09:23:31 | INFO     | data_collectors.market_data:collect:28 | Collecting data for TSLA - period: 30d, interval: 1d
+2025-09-01 09:23:32 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for TSLA with interval 1d.
+2025-09-01 09:23:32 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for TSLA to PostgreSQL.
+2025-09-01 09:23:32 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for TSLA
+2025-09-01 09:23:33 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 09:23:34 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 09:23:35 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 09:23:35 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 09:23:36 | INFO     | data_collectors.market_data:collect:28 | Collecting data for VALE3.SA - period: 30d, interval: 1d
+2025-09-01 09:23:37 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for VALE3.SA with interval 1d.
+2025-09-01 09:23:37 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for VALE3.SA to PostgreSQL.
+2025-09-01 09:23:37 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for VALE3.SA
+2025-09-01 09:23:38 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 6/6 successful
+2025-09-01 09:23:39 | INFO     | data_collectors.news_collector:fetch_news:65 | Buscando notícias com parâmetros: {'q': '"AAPL" OR "GOOGL" OR "MSFT" OR "TSLA" OR "PETR4" OR "VALE3" OR "Apple" OR "Google" OR "Microsoft" OR "Tesla" OR "Petrobras" OR "Vale"', 'from': '2025-08-31T12:23:39.124592+00:00', 'sortBy': 'publishedAt', 'language': 'pt', 'pageSize': 100, 'sources': 'reuters,bloomberg,financial-times,exame,investing'}
+2025-09-01 09:23:40 | INFO     | data_collectors.news_collector:fetch_news:69 | Status da API: 200
+2025-09-01 09:23:40 | INFO     | data_collectors.news_collector:fetch_news:78 | 0 artigos retornados da API.
+2025-09-01 09:23:40 | INFO     | data_collectors.news_collector:fetch_news:81 | Total disponível: 0 notícias.
+2025-09-01 09:23:40 | INFO     | data_collectors.news_collector:process_and_store:121 | 0 notícias relevantes inseridas no banco.
+2025-09-01 09:23:40 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 09:23:40 | INFO     | __main__:main:37 | Total de registros: 210
+2025-09-01 09:23:40 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 09:23:40 | INFO     | __main__:main:39 | Último update: 2025-08-29 04:00:00
+2025-09-01 09:23:40 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 09:23:40 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 09:23:40 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 09:28:36 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:28:36 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:28:36 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:28:37 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 09:28:37 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 6 symbols
+2025-09-01 09:28:37 | INFO     | data_collectors.market_data:collect:28 | Collecting data for AAPL - period: 30d, interval: 1d
+2025-09-01 09:28:39 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for AAPL with interval 1d.
+2025-09-01 09:28:41 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for AAPL to PostgreSQL.
+2025-09-01 09:28:41 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for AAPL
+2025-09-01 09:28:42 | INFO     | data_collectors.market_data:collect:28 | Collecting data for GOOGL - period: 30d, interval: 1d
+2025-09-01 09:28:44 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for GOOGL with interval 1d.
+2025-09-01 09:28:45 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for GOOGL to PostgreSQL.
+2025-09-01 09:28:45 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for GOOGL
+2025-09-01 09:28:46 | INFO     | data_collectors.market_data:collect:28 | Collecting data for MSFT - period: 30d, interval: 1d
+2025-09-01 09:28:47 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for MSFT with interval 1d.
+2025-09-01 09:28:49 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for MSFT to PostgreSQL.
+2025-09-01 09:28:49 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for MSFT
+2025-09-01 09:28:50 | INFO     | data_collectors.market_data:collect:28 | Collecting data for TSLA - period: 30d, interval: 1d
+2025-09-01 09:28:51 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for TSLA with interval 1d.
+2025-09-01 09:28:53 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for TSLA to PostgreSQL.
+2025-09-01 09:28:53 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for TSLA
+2025-09-01 09:28:54 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 09:28:55 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 09:28:56 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 09:28:56 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 09:28:57 | INFO     | data_collectors.market_data:collect:28 | Collecting data for VALE3.SA - period: 30d, interval: 1d
+2025-09-01 09:28:58 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for VALE3.SA with interval 1d.
+2025-09-01 09:29:00 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for VALE3.SA to PostgreSQL.
+2025-09-01 09:29:00 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for VALE3.SA
+2025-09-01 09:29:01 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 6/6 successful
+2025-09-01 09:29:01 | INFO     | data_collectors.news_collector:fetch_news:78 | Buscando notícias com parâmetros: {'q': '"Apple" OR "Google" OR "Microsoft" OR "Tesla" OR "Petrobras" OR "Petrobras" OR "Vale" OR "Vale" OR "bolsa" OR "ação" OR "ações" OR "investimento" OR "Ibovespa"', 'from': '2025-08-31T12:29:01.605621+00:00', 'sortBy': 'publishedAt', 'language': 'pt', 'pageSize': 100, 'sources': 'reuters,bloomberg,financial-times,exame,investing'}
+2025-09-01 09:29:02 | INFO     | data_collectors.news_collector:fetch_news:82 | Status da API: 200
+2025-09-01 09:29:02 | INFO     | data_collectors.news_collector:fetch_news:91 | 0 artigos retornados da API.
+2025-09-01 09:29:02 | INFO     | data_collectors.news_collector:fetch_news:94 | Total disponível: 0 notícias.
+2025-09-01 09:29:02 | INFO     | data_collectors.news_collector:process_and_store:134 | 0 notícias relevantes inseridas no banco.
+2025-09-01 09:29:02 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 09:29:02 | INFO     | __main__:main:37 | Total de registros: 210
+2025-09-01 09:29:02 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 09:29:02 | INFO     | __main__:main:39 | Último update: 2025-08-29 04:00:00
+2025-09-01 09:29:02 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 09:29:02 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 09:29:02 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 09:32:19 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:32:19 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:32:19 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:32:20 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 09:32:20 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 6 symbols
+2025-09-01 09:32:20 | INFO     | data_collectors.market_data:collect:28 | Collecting data for AAPL - period: 30d, interval: 1d
+2025-09-01 09:32:22 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for AAPL with interval 1d.
+2025-09-01 09:32:22 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for AAPL to PostgreSQL.
+2025-09-01 09:32:22 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for AAPL
+2025-09-01 09:32:23 | INFO     | data_collectors.market_data:collect:28 | Collecting data for GOOGL - period: 30d, interval: 1d
+2025-09-01 09:32:24 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for GOOGL with interval 1d.
+2025-09-01 09:32:25 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for GOOGL to PostgreSQL.
+2025-09-01 09:32:25 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for GOOGL
+2025-09-01 09:32:26 | INFO     | data_collectors.market_data:collect:28 | Collecting data for MSFT - period: 30d, interval: 1d
+2025-09-01 09:32:27 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for MSFT with interval 1d.
+2025-09-01 09:32:27 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for MSFT to PostgreSQL.
+2025-09-01 09:32:27 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for MSFT
+2025-09-01 09:32:28 | INFO     | data_collectors.market_data:collect:28 | Collecting data for TSLA - period: 30d, interval: 1d
+2025-09-01 09:32:30 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for TSLA with interval 1d.
+2025-09-01 09:32:30 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for TSLA to PostgreSQL.
+2025-09-01 09:32:30 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for TSLA
+2025-09-01 09:32:31 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 09:32:32 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 09:32:33 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 09:32:33 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 09:32:34 | INFO     | data_collectors.market_data:collect:28 | Collecting data for VALE3.SA - period: 30d, interval: 1d
+2025-09-01 09:32:35 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for VALE3.SA with interval 1d.
+2025-09-01 09:32:35 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for VALE3.SA to PostgreSQL.
+2025-09-01 09:32:35 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for VALE3.SA
+2025-09-01 09:32:36 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 6/6 successful
+2025-09-01 09:32:37 | ERROR    | __main__:main:53 | Erro crítico no sistema: name 'urlencode' is not defined
+2025-09-01 09:33:44 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:33:44 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:33:44 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:33:45 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 09:33:45 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 6 symbols
+2025-09-01 09:33:45 | INFO     | data_collectors.market_data:collect:28 | Collecting data for AAPL - period: 30d, interval: 1d
+2025-09-01 09:33:47 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for AAPL with interval 1d.
+2025-09-01 09:33:47 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for AAPL to PostgreSQL.
+2025-09-01 09:33:47 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for AAPL
+2025-09-01 09:33:48 | INFO     | data_collectors.market_data:collect:28 | Collecting data for GOOGL - period: 30d, interval: 1d
+2025-09-01 09:33:50 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for GOOGL with interval 1d.
+2025-09-01 09:33:50 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for GOOGL to PostgreSQL.
+2025-09-01 09:33:50 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for GOOGL
+2025-09-01 09:33:51 | INFO     | data_collectors.market_data:collect:28 | Collecting data for MSFT - period: 30d, interval: 1d
+2025-09-01 09:33:52 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for MSFT with interval 1d.
+2025-09-01 09:33:53 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for MSFT to PostgreSQL.
+2025-09-01 09:33:53 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for MSFT
+2025-09-01 09:33:54 | INFO     | data_collectors.market_data:collect:28 | Collecting data for TSLA - period: 30d, interval: 1d
+2025-09-01 09:34:03 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for TSLA with interval 1d.
+2025-09-01 09:34:04 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for TSLA to PostgreSQL.
+2025-09-01 09:34:04 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for TSLA
+2025-09-01 09:34:05 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 09:34:06 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 09:34:07 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 09:34:07 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 09:34:08 | INFO     | data_collectors.market_data:collect:28 | Collecting data for VALE3.SA - period: 30d, interval: 1d
+2025-09-01 09:34:09 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for VALE3.SA with interval 1d.
+2025-09-01 09:34:10 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for VALE3.SA to PostgreSQL.
+2025-09-01 09:34:10 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for VALE3.SA
+2025-09-01 09:34:11 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 6/6 successful
+2025-09-01 09:34:12 | INFO     | data_collectors.news_collector:fetch_news:81 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras+OR+Vale+OR+Apple+OR+bolsa+OR+a%C3%A7%C3%B5es+OR+investimento&from=2025-08-31T12%3A34%3A12.603526%2B00%3A00&sortBy=publishedAt&language=pt&pageSize=100
+2025-09-01 09:34:14 | INFO     | data_collectors.news_collector:fetch_news:90 | 📡 Status da API: 200
+2025-09-01 09:34:14 | INFO     | data_collectors.news_collector:fetch_news:100 | 📥 0 artigos retornados (total disponível: 0)
+2025-09-01 09:34:14 | INFO     | data_collectors.news_collector:process_and_store:140 | 0 notícias relevantes inseridas no banco.
+2025-09-01 09:34:14 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 09:34:14 | INFO     | __main__:main:37 | Total de registros: 210
+2025-09-01 09:34:14 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 09:34:14 | INFO     | __main__:main:39 | Último update: 2025-08-29 04:00:00
+2025-09-01 09:34:14 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 09:34:14 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 09:34:14 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 09:35:29 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:35:29 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:35:29 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:35:30 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 09:35:30 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 1 symbols
+2025-09-01 09:35:30 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 09:35:32 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 09:35:33 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 09:35:33 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 09:35:34 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 1/1 successful
+2025-09-01 09:35:34 | INFO     | data_collectors.news_collector:fetch_news:82 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras+OR+Vale+OR+Apple+OR+bolsa+OR+a%C3%A7%C3%B5es+OR+investimento&from=2025-08-31T12%3A35%3A34.622284%2B00%3A00&sortBy=publishedAt&language=pt&pageSize=100&apiKey=a01ed35294254f1289883595e9a0a1d5
+2025-09-01 09:35:35 | INFO     | data_collectors.news_collector:fetch_news:91 | 📡 Status da API: 200
+2025-09-01 09:35:35 | INFO     | data_collectors.news_collector:fetch_news:101 | 📥 0 artigos retornados (total disponível: 0)
+2025-09-01 09:35:35 | INFO     | data_collectors.news_collector:process_and_store:141 | 0 notícias relevantes inseridas no banco.
+2025-09-01 09:35:36 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 09:35:36 | INFO     | __main__:main:37 | Total de registros: 210
+2025-09-01 09:35:36 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 09:35:36 | INFO     | __main__:main:39 | Último update: 2025-08-29 04:00:00
+2025-09-01 09:35:36 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 09:35:36 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 09:35:36 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 09:37:02 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:37:02 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:37:02 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:37:03 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 09:37:03 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 1 symbols
+2025-09-01 09:37:03 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 09:37:04 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 09:37:05 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 09:37:05 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 09:37:06 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 1/1 successful
+2025-09-01 09:37:06 | INFO     | data_collectors.news_collector:fetch_news:80 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras&sortBy=publishedAt&language=pt&apiKey=a01ed35294254f1289883595e9a0a1d5
+2025-09-01 09:37:08 | INFO     | data_collectors.news_collector:fetch_news:89 | 📡 Status da API: 200
+2025-09-01 09:37:08 | INFO     | data_collectors.news_collector:fetch_news:99 | 📥 100 artigos retornados (total disponível: 489)
+2025-09-01 09:37:08 | ERROR    | data_collectors.news_collector:process_and_store:137 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 09:37:08 | ERROR    | data_collectors.news_collector:process_and_store:137 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 09:37:08 | ERROR    | __main__:main:53 | Erro crítico no sistema: unsupported operand type(s) for +: 'NoneType' and 'str'
+2025-09-01 09:41:54 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:41:54 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:41:54 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:41:55 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 09:41:55 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 1 symbols
+2025-09-01 09:41:55 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 09:41:57 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 09:41:57 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 09:41:57 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 09:41:58 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 1/1 successful
+2025-09-01 09:41:59 | INFO     | data_collectors.news_collector:fetch_news:80 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras&from=2025-08-31T12%3A41%3A59.297991%2B00%3A00&sortBy=publishedAt&language=pt
+2025-09-01 09:42:00 | INFO     | data_collectors.news_collector:fetch_news:84 | 📡 Status da API: 200
+2025-09-01 09:42:00 | INFO     | data_collectors.news_collector:fetch_news:94 | 📥 0 artigos retornados (total disponível: 0)
+2025-09-01 09:42:00 | INFO     | data_collectors.news_collector:process_and_store:137 | 0 notícias relevantes inseridas no banco.
+2025-09-01 09:42:00 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 09:42:00 | INFO     | __main__:main:37 | Total de registros: 210
+2025-09-01 09:42:00 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 09:42:00 | INFO     | __main__:main:39 | Último update: 2025-08-29 04:00:00
+2025-09-01 09:42:00 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 09:42:00 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 09:42:00 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 09:43:55 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:43:55 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:43:55 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:43:56 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 09:43:57 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 1 symbols
+2025-09-01 09:43:57 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 09:43:59 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 09:44:00 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 09:44:00 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 09:44:01 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 1/1 successful
+2025-09-01 09:44:01 | INFO     | data_collectors.news_collector:fetch_news:81 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras&from=2025-08-31T12%3A44%3A01.749591%2B00%3A00&sortBy=publishedAt&language=pt&apiKey=a01ed35294254f1289883595e9a0a1d5
+2025-09-01 09:44:02 | INFO     | data_collectors.news_collector:fetch_news:85 | 📡 Status da API: 200
+2025-09-01 09:44:02 | INFO     | data_collectors.news_collector:fetch_news:95 | 📥 0 artigos retornados (total disponível: 0)
+2025-09-01 09:44:02 | INFO     | data_collectors.news_collector:process_and_store:138 | 0 notícias relevantes inseridas no banco.
+2025-09-01 09:44:02 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 09:44:02 | INFO     | __main__:main:37 | Total de registros: 210
+2025-09-01 09:44:02 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 09:44:02 | INFO     | __main__:main:39 | Último update: 2025-08-29 04:00:00
+2025-09-01 09:44:02 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 09:44:02 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 09:44:02 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 09:44:38 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:44:38 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:44:38 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:44:38 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 09:44:39 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 1 symbols
+2025-09-01 09:44:39 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 09:44:40 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 09:44:41 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 09:44:41 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 09:44:42 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 1/1 successful
+2025-09-01 09:44:43 | INFO     | data_collectors.news_collector:fetch_news:80 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras&sortBy=publishedAt&language=pt&apiKey=a01ed35294254f1289883595e9a0a1d5
+2025-09-01 09:44:44 | INFO     | data_collectors.news_collector:fetch_news:84 | 📡 Status da API: 200
+2025-09-01 09:44:44 | INFO     | data_collectors.news_collector:fetch_news:94 | 📥 100 artigos retornados (total disponível: 489)
+2025-09-01 09:44:44 | ERROR    | data_collectors.news_collector:process_and_store:135 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 09:44:44 | ERROR    | data_collectors.news_collector:process_and_store:135 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 09:44:44 | ERROR    | data_collectors.news_collector:process_and_store:135 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 09:44:44 | ERROR    | data_collectors.news_collector:process_and_store:135 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 09:44:44 | ERROR    | data_collectors.news_collector:process_and_store:135 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 09:44:44 | ERROR    | data_collectors.news_collector:process_and_store:135 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 09:44:44 | ERROR    | data_collectors.news_collector:process_and_store:135 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 09:44:44 | ERROR    | data_collectors.news_collector:process_and_store:135 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 09:44:44 | ERROR    | data_collectors.news_collector:process_and_store:135 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 09:44:44 | ERROR    | data_collectors.news_collector:process_and_store:135 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 09:44:44 | ERROR    | data_collectors.news_collector:process_and_store:135 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 09:44:44 | ERROR    | data_collectors.news_collector:process_and_store:135 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 09:44:44 | INFO     | data_collectors.news_collector:process_and_store:137 | 0 notícias relevantes inseridas no banco.
+2025-09-01 09:44:45 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 09:44:45 | INFO     | __main__:main:37 | Total de registros: 210
+2025-09-01 09:44:45 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 09:44:45 | INFO     | __main__:main:39 | Último update: 2025-08-29 04:00:00
+2025-09-01 09:44:45 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 09:44:45 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 09:44:45 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 09:48:28 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:48:28 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:48:28 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:48:28 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 09:48:28 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 1 symbols
+2025-09-01 09:48:28 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 09:48:30 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 09:48:31 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 09:48:31 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 09:48:32 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 1/1 successful
+2025-09-01 09:48:32 | INFO     | data_collectors.news_collector:fetch_news:83 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras&from=2025-08-31T12%3A48%3A32.249281%2B00%3A00&sortBy=publishedAt&language=pt&pageSize=100
+2025-09-01 09:48:33 | INFO     | data_collectors.news_collector:fetch_news:87 | 📡 Status da API: 200
+2025-09-01 09:48:33 | INFO     | data_collectors.news_collector:fetch_news:97 | 📥 0 artigos retornados (total disponível: 0)
+2025-09-01 09:48:33 | INFO     | data_collectors.news_collector:process_and_store:140 | 0 notícias relevantes inseridas no banco.
+2025-09-01 09:48:33 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 09:48:33 | INFO     | __main__:main:37 | Total de registros: 210
+2025-09-01 09:48:33 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 09:48:33 | INFO     | __main__:main:39 | Último update: 2025-08-29 04:00:00
+2025-09-01 09:48:33 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 09:48:33 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 09:48:33 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 09:50:41 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:50:41 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:50:41 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:50:42 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 09:50:42 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 1 symbols
+2025-09-01 09:50:42 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 09:50:44 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 09:50:45 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 09:50:45 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 09:50:46 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 1/1 successful
+2025-09-01 09:50:46 | INFO     | data_collectors.news_collector:fetch_news:83 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras&from=2025-08-31T12%3A50%3A46.955985%2B00%3A00&sortBy=publishedAt&language=pt&pageSize=100
+2025-09-01 09:50:48 | INFO     | data_collectors.news_collector:fetch_news:87 | 📡 Status da API: 200
+2025-09-01 09:50:48 | INFO     | data_collectors.news_collector:fetch_news:97 | 📥 0 artigos retornados (total disponível: 0)
+2025-09-01 09:50:48 | INFO     | data_collectors.news_collector:process_and_store:140 | 0 notícias relevantes inseridas no banco.
+2025-09-01 09:50:48 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 09:50:48 | INFO     | __main__:main:37 | Total de registros: 210
+2025-09-01 09:50:48 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 09:50:48 | INFO     | __main__:main:39 | Último update: 2025-08-29 04:00:00
+2025-09-01 09:50:48 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 09:50:48 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 09:50:48 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 09:52:42 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:52:42 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:52:42 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:52:42 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 09:52:43 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 1 symbols
+2025-09-01 09:52:43 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 09:52:45 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 09:52:45 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 09:52:45 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 09:52:46 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 1/1 successful
+2025-09-01 09:52:46 | INFO     | data_collectors.news_collector:fetch_news:83 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras&from=2025-08-31T12%3A52%3A46.727499%2B00%3A00&sortBy=publishedAt&language=pt&pageSize=100&apiKey=a01ed35294254f1289883595e9a0a1d5
+2025-09-01 09:52:47 | INFO     | data_collectors.news_collector:fetch_news:87 | 📡 Status da API: 200
+2025-09-01 09:52:47 | INFO     | data_collectors.news_collector:fetch_news:97 | 📥 0 artigos retornados (total disponível: 0)
+2025-09-01 09:52:47 | INFO     | data_collectors.news_collector:process_and_store:140 | 0 notícias relevantes inseridas no banco.
+2025-09-01 09:52:47 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 09:52:47 | INFO     | __main__:main:37 | Total de registros: 210
+2025-09-01 09:52:47 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 09:52:47 | INFO     | __main__:main:39 | Último update: 2025-08-29 04:00:00
+2025-09-01 09:52:47 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 09:52:47 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 09:52:47 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 09:54:11 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:54:11 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:54:11 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:54:12 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 09:54:12 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 1 symbols
+2025-09-01 09:54:12 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 09:54:13 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 09:54:14 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 09:54:14 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 09:54:15 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 1/1 successful
+2025-09-01 09:54:15 | INFO     | data_collectors.news_collector:fetch_news:83 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras+OR+investimento+OR+bolsa&from=2025-08-31T12%3A54%3A15.227753%2B00%3A00&sortBy=publishedAt&language=pt&pageSize=100&apiKey=a01ed35294254f1289883595e9a0a1d5
+2025-09-01 09:54:15 | INFO     | data_collectors.news_collector:fetch_news:87 | 📡 Status da API: 200
+2025-09-01 09:54:15 | INFO     | data_collectors.news_collector:fetch_news:97 | 📥 0 artigos retornados (total disponível: 0)
+2025-09-01 09:54:15 | INFO     | data_collectors.news_collector:process_and_store:140 | 0 notícias relevantes inseridas no banco.
+2025-09-01 09:54:16 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 09:54:16 | INFO     | __main__:main:37 | Total de registros: 210
+2025-09-01 09:54:16 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 09:54:16 | INFO     | __main__:main:39 | Último update: 2025-08-29 04:00:00
+2025-09-01 09:54:16 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 09:54:16 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 09:54:16 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 09:55:41 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 09:55:41 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 09:55:41 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 09:55:41 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 09:55:42 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 1 symbols
+2025-09-01 09:55:42 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 09:55:44 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 5 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 09:55:45 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 09:55:45 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 09:55:46 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 1/1 successful
+2025-09-01 09:55:46 | INFO     | data_collectors.news_collector:fetch_news:82 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras+OR+investimento+OR+bolsa&sortBy=publishedAt&language=pt&pageSize=100&apiKey=a01ed35294254f1289883595e9a0a1d5
+2025-09-01 09:55:48 | INFO     | data_collectors.news_collector:fetch_news:86 | 📡 Status da API: 200
+2025-09-01 09:55:48 | INFO     | data_collectors.news_collector:fetch_news:96 | 📥 94 artigos retornados (total disponível: 5486)
+2025-09-01 09:55:48 | INFO     | data_collectors.news_collector:process_and_store:139 | 0 notícias relevantes inseridas no banco.
+2025-09-01 09:55:48 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 09:55:48 | INFO     | __main__:main:37 | Total de registros: 210
+2025-09-01 09:55:48 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 09:55:48 | INFO     | __main__:main:39 | Último update: 2025-08-29 04:00:00
+2025-09-01 09:55:48 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 09:55:48 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 09:55:48 | INFO     | __main__:main:50 | ============================================================
