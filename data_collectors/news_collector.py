@@ -44,27 +44,39 @@ class NewsCollector:
         all_terms = keywords + sector_terms
         return " OR ".join([f'"{term}"' for term in all_terms])
 
-    def _is_relevant(self, title: str, content: str) -> bool:
-        """Verifica se notícia é relevante"""
-        text = (title + " " + (content or "")).lower()
-        return any(s.split('.')[0].lower() in text for s in settings.SYMBOLS)
-
     def _extract_symbols(self, text: str) -> List[str]:
-        """Extrai símbolos mencionados no texto"""
+       
         found = []
-        text_lower = text.lower()
-        for symbol in settings.SYMBOLS:
-            ticker = symbol.split('.')[0].lower()
-            if ticker in text_lower:
+        text_clean = text.lower().replace(" ", "").replace(".", "")
+
+        mapping = {
+            "petrobras": "PETR4.SA",
+            "vale": "VALE3.SA",
+            "itau": "ITUB4.SA",
+            "bradesco": "BBDC4.SA",
+            "ambev": "ABEV3.SA",
+            "apple": "AAPL",
+            "google": "GOOGL",
+            "microsoft": "MSFT",
+            "tesla": "TSLA",
+        }
+
+        for word, symbol in mapping.items():
+            if word in text_clean:
                 found.append(symbol)
+
         return list(set(found))
+
+    def _is_relevant(self, title: str, content: str) -> bool:
+        combined = f"{title} {content or ''}"
+        return len(self._extract_symbols(combined)) > 0
 
     def fetch_news(self) -> List[Dict]:
         if not settings.NEWSAPI_KEY:
             app_logger.warning("NewsAPI key não configurada.")
             return []
 
-        # ✅ URL limpa
+        # ✅ URL limparfr
         url = "https://newsapi.org/v2/everything"  # Sem espaços!
 
         from_time = datetime.now(timezone.utc) - timedelta(hours=settings.NEWS_PERIOD_HOURS)

@@ -525,3 +525,156 @@ ESTATÍSTICAS DO BANCO:
 2025-09-01 09:55:48 | INFO     | __main__:main:48 | ============================================================
 2025-09-01 09:55:48 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
 2025-09-01 09:55:48 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 13:13:52 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 13:13:52 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 13:13:52 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 13:13:53 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 13:13:54 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 1 symbols
+2025-09-01 13:13:54 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 13:13:55 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 6 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 13:13:57 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 1 new records for PETR4.SA to PostgreSQL.
+2025-09-01 13:13:57 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 13:13:58 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 1/1 successful
+2025-09-01 13:13:59 | INFO     | data_collectors.news_collector:fetch_news:82 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras+OR+investimento+OR+bolsa&sortBy=publishedAt&language=pt&pageSize=100&apiKey=a01ed35294254f1289883595e9a0a1d5
+2025-09-01 13:14:01 | INFO     | data_collectors.news_collector:fetch_news:86 | 📡 Status da API: 200
+2025-09-01 13:14:01 | INFO     | data_collectors.news_collector:fetch_news:96 | 📥 92 artigos retornados (total disponível: 5504)
+2025-09-01 13:14:01 | INFO     | data_collectors.news_collector:process_and_store:139 | 0 notícias relevantes inseridas no banco.
+2025-09-01 13:14:01 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 13:14:01 | INFO     | __main__:main:37 | Total de registros: 211
+2025-09-01 13:14:01 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 13:14:01 | INFO     | __main__:main:39 | Último update: 2025-09-01 03:00:00
+2025-09-01 13:14:01 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 13:14:01 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 13:14:01 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 13:16:19 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 13:16:19 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 13:16:19 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 13:16:20 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 13:16:20 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 1 symbols
+2025-09-01 13:16:20 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 13:16:21 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 6 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 13:16:22 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 13:16:22 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 13:16:23 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 1/1 successful
+2025-09-01 13:16:23 | INFO     | data_collectors.news_collector:fetch_news:94 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras+OR+investimento+OR+bolsa&sortBy=publishedAt&language=pt&pageSize=100&apiKey=a01ed35294254f1289883595e9a0a1d5
+2025-09-01 13:16:25 | INFO     | data_collectors.news_collector:fetch_news:98 | 📡 Status da API: 200
+2025-09-01 13:16:25 | INFO     | data_collectors.news_collector:fetch_news:108 | 📥 92 artigos retornados (total disponível: 5504)
+2025-09-01 13:16:25 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:16:25 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:16:25 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:16:25 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:16:25 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:16:25 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:16:25 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:16:25 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:16:25 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:16:25 | INFO     | data_collectors.news_collector:process_and_store:151 | 0 notícias relevantes inseridas no banco.
+2025-09-01 13:16:25 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 13:16:25 | INFO     | __main__:main:37 | Total de registros: 211
+2025-09-01 13:16:25 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 13:16:25 | INFO     | __main__:main:39 | Último update: 2025-09-01 03:00:00
+2025-09-01 13:16:25 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 13:16:25 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 13:16:25 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 13:19:07 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 13:19:07 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 13:19:07 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 13:19:08 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 13:19:08 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 1 symbols
+2025-09-01 13:19:08 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 13:19:17 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 6 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 13:19:18 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 13:19:18 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 13:19:19 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 1/1 successful
+2025-09-01 13:19:19 | INFO     | data_collectors.news_collector:fetch_news:94 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras+OR+investimento+OR+bolsa&sortBy=publishedAt&language=pt&pageSize=100&apiKey=a01ed35294254f1289883595e9a0a1d5
+2025-09-01 13:19:28 | INFO     | data_collectors.news_collector:fetch_news:98 | 📡 Status da API: 200
+2025-09-01 13:19:28 | INFO     | data_collectors.news_collector:fetch_news:108 | 📥 92 artigos retornados (total disponível: 5504)
+2025-09-01 13:19:28 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:19:28 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:19:28 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:19:28 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:19:28 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:19:28 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:19:28 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:19:28 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:19:28 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:19:28 | INFO     | data_collectors.news_collector:process_and_store:151 | 0 notícias relevantes inseridas no banco.
+2025-09-01 13:19:28 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 13:19:28 | INFO     | __main__:main:37 | Total de registros: 211
+2025-09-01 13:19:28 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 13:19:28 | INFO     | __main__:main:39 | Último update: 2025-09-01 03:00:00
+2025-09-01 13:19:28 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 13:19:28 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 13:19:28 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 13:21:22 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 13:21:22 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 13:21:22 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 13:21:23 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 13:21:23 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 1 symbols
+2025-09-01 13:21:23 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 13:21:25 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 6 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 13:21:27 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 13:21:27 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 13:21:28 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 1/1 successful
+2025-09-01 13:21:29 | INFO     | data_collectors.news_collector:fetch_news:94 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras+OR+investimento+OR+bolsa&sortBy=publishedAt&language=pt&pageSize=100&apiKey=a01ed35294254f1289883595e9a0a1d5
+2025-09-01 13:21:30 | INFO     | data_collectors.news_collector:fetch_news:98 | 📡 Status da API: 200
+2025-09-01 13:21:30 | INFO     | data_collectors.news_collector:fetch_news:108 | 📥 92 artigos retornados (total disponível: 5504)
+2025-09-01 13:21:30 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:21:30 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:21:30 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:21:30 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:21:30 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:21:30 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:21:30 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:21:30 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:21:30 | ERROR    | data_collectors.news_collector:process_and_store:149 | Erro ao salvar notícia: List argument must consist only of dictionaries
+2025-09-01 13:21:30 | INFO     | data_collectors.news_collector:process_and_store:151 | 0 notícias relevantes inseridas no banco.
+2025-09-01 13:21:31 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 13:21:31 | INFO     | __main__:main:37 | Total de registros: 211
+2025-09-01 13:21:31 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 13:21:31 | INFO     | __main__:main:39 | Último update: 2025-09-01 03:00:00
+2025-09-01 13:21:31 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 13:21:31 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 13:21:31 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 13:23:02 | INFO     | __main__:main:12 | ============================================================
+2025-09-01 13:23:02 | INFO     | __main__:main:13 | TRADING SYSTEM - INICIANDO
+2025-09-01 13:23:02 | INFO     | __main__:main:14 | ============================================================
+2025-09-01 13:23:03 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 13:23:04 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 1 symbols
+2025-09-01 13:23:04 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 13:23:06 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 6 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 13:23:07 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 13:23:07 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 13:23:08 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 1/1 successful
+2025-09-01 13:23:09 | INFO     | data_collectors.news_collector:fetch_news:94 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras+OR+investimento+OR+bolsa&sortBy=publishedAt&language=pt&pageSize=100&apiKey=a01ed35294254f1289883595e9a0a1d5
+2025-09-01 13:23:11 | INFO     | data_collectors.news_collector:fetch_news:98 | 📡 Status da API: 200
+2025-09-01 13:23:11 | INFO     | data_collectors.news_collector:fetch_news:108 | 📥 92 artigos retornados (total disponível: 5504)
+2025-09-01 13:23:12 | INFO     | data_collectors.news_collector:process_and_store:151 | 9 notícias relevantes inseridas no banco.
+2025-09-01 13:23:13 | INFO     | __main__:main:36 | 
+ESTATÍSTICAS DO BANCO:
+2025-09-01 13:23:13 | INFO     | __main__:main:37 | Total de registros: 211
+2025-09-01 13:23:13 | INFO     | __main__:main:38 | Símbolos únicos: 7
+2025-09-01 13:23:13 | INFO     | __main__:main:39 | Último update: 2025-09-01 03:00:00
+2025-09-01 13:23:13 | INFO     | __main__:main:48 | ============================================================
+2025-09-01 13:23:13 | INFO     | __main__:main:49 | TRADING SYSTEM - FINALIZADO COM SUCESSO
+2025-09-01 13:23:13 | INFO     | __main__:main:50 | ============================================================
+2025-09-01 13:35:09 | INFO     | __main__:main:11 | ============================================================
+2025-09-01 13:35:09 | INFO     | __main__:main:12 | TRADING SYSTEM - FASE 4 - INICIANDO
+2025-09-01 13:35:09 | INFO     | __main__:main:13 | ============================================================
+2025-09-01 13:35:10 | INFO     | storage.database_postgres:create_news_table:200 | Tabela 'news' verificada/criada.
+2025-09-01 13:35:10 | INFO     | storage.database_postgres:create_fundamentals_tables:387 | Tabelas de fundamentals criadas/verificadas
+2025-09-01 13:35:10 | INFO     | data_collectors.market_data:collect_multiple:134 | Starting collection for 1 symbols
+2025-09-01 13:35:10 | INFO     | data_collectors.market_data:collect:28 | Collecting data for PETR4.SA - period: 30d, interval: 1d
+2025-09-01 13:35:12 | WARNING  | data_collectors.market_data:_validate_market_data:122 | Found 6 potential data gaps for PETR4.SA with interval 1d.
+2025-09-01 13:35:13 | INFO     | storage.database_postgres:save_market_data:106 | Successfully saved 0 new records for PETR4.SA to PostgreSQL.
+2025-09-01 13:35:13 | INFO     | data_collectors.market_data:collect:49 | Successfully collected 30 records for PETR4.SA
+2025-09-01 13:35:14 | INFO     | data_collectors.market_data:collect_multiple:144 | Collection completed: 1/1 successful
+2025-09-01 13:35:14 | INFO     | data_collectors.news_collector:fetch_news:94 | 🔍 URL da API: https://newsapi.org/v2/everything?q=Petrobras+OR+investimento+OR+bolsa&sortBy=publishedAt&language=pt&pageSize=100&apiKey=a01ed35294254f1289883595e9a0a1d5
+2025-09-01 13:35:15 | INFO     | data_collectors.news_collector:fetch_news:98 | 📡 Status da API: 200
+2025-09-01 13:35:15 | INFO     | data_collectors.news_collector:fetch_news:108 | 📥 91 artigos retornados (total disponível: 5507)
+2025-09-01 13:35:16 | INFO     | data_collectors.news_collector:process_and_store:151 | 8 notícias relevantes inseridas no banco.
+2025-09-01 13:35:16 | ERROR    | __main__:main:89 | Erro crítico no sistema: Can't instantiate abstract class FundamentalsCollector without an implementation for abstract method 'collect'

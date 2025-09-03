@@ -1,5 +1,3 @@
-# config/settings.py
-
 import os
 from pathlib import Path
 from typing import List
@@ -24,7 +22,13 @@ class Settings:
     NEWSAPI_KEY = os.getenv("NEWSAPI_KEY")
     NEWS_SOURCES = os.getenv("NEWS_SOURCES", "reuters,bloomberg").split(",")
     NEWS_LANGUAGE = "pt" if any(s.endswith(".SA") for s in SYMBOLS) else "en"
-    NEWS_PERIOD_HOURS = 24  # buscar notícias das últimas N horas
+    NEWS_PERIOD_HOURS = 24
+
+    # Fundamentals APIs
+    FMP_API_KEY = os.getenv("FMP_API_KEY")
+    ALPHA_VANTAGE_API_KEY = os.getenv("ALPHA_VANTAGE_API_KEY")
+    COLLECT_FUNDAMENTALS = os.getenv("COLLECT_FUNDAMENTALS", "True").lower() == "true"
+    FUNDAMENTALS_UPDATE_FREQUENCY = os.getenv("FUNDAMENTALS_UPDATE_FREQUENCY", "daily")
 
     # Logs
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")

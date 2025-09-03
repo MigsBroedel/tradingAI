@@ -5,3 +5,5 @@ psycopg2-binary
 pandas
 requests
 textblob
+financialmodelingprep==0.1.7
+alpha-vantage==2.3.1
